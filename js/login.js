@@ -6,8 +6,8 @@ document.getElementById("submit-btn").addEventListener("click", function () {
   const password = passwordField.value;
 
   if (email === "user@email.com" && password === "secret") {
-    console.log("valid user");
+    window.location.href = "bank.html";
   } else {
-    console.log("wrong info");
+    alert("wrong info");
   }
 });
