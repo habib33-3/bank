@@ -1,4 +1,4 @@
-document.getElementById("submit-btn").addEventListener("click", function () {
+function checkInfo() {
   const emailField = document.getElementById("user-email");
   const email = emailField.value;
 
@@ -9,5 +9,12 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     window.location.href = "bank.html";
   } else {
     alert("wrong info");
+  }
+}
+
+document.getElementById("submit-btn").addEventListener("click", checkInfo);
+document.getElementById("submit-btn").addEventListener("keyup", function (e) {
+  if (e.key === "Enter") {
+    checkInfo();
   }
 });
